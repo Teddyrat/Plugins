@@ -27,28 +27,30 @@ class Config:
     # storage dir: you may or may not edit
     DWL_DIR = "./downloads/"
     TEMP_DIR = "./temp/"
-    CHROME_BIN = getenv("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
-    CHROME_DRIVER = getenv("CHROME_DRIVER", "/app/.chromedriver/bin/chromedriver")
+    CHROME_BIN = getenv("CHROME_BIN", "/app/.chrome-for-testing/chrome-linux64/chrome")
+    CHROME_DRIVER = getenv(
+        "CHROME_DRIVER", "/app/.chrome-for-testing/chromedriver-linux64/chromedriver"
+    )
     FONT_PATH = "./Hellbot/resources/fonts/Montserrat.ttf"
 
     # users config: do not edit
     AUTH_USERS = filters.user()
     BANNED_USERS = filters.user()
+    GACHA_BOTS = filters.user()
     MUTED_USERS = filters.user()
     DEVS = filters.user([1432756163, 1874070588, 1533682758])
     STAN_USERS = filters.user()
     FORCESUBS = filters.chat()
 
     # Global config: do not edit
+    AFK_CACHE = {}
     BOT_CMD_INFO = {}
     BOT_CMD_MENU = {}
     BOT_HELP = {}
-
     CMD_INFO = {}
     CMD_MENU = {}
     HELP_DICT = {}
-
-    AFK_CACHE = {}
+    TEMPLATES = {}
 
 
 class ENV:
